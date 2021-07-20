@@ -1,0 +1,55 @@
+<html>
+    
+
+<script>
+
+    function add(){
+
+        let no1,no2,no3;
+        no1=document.getElementById("first").value;
+        no2=document.getElementById("second").value;
+        no3=parseInt(no1)+parseInt(no2);
+        document.getElementById("result").value=no3;
+    }
+
+        function substract(){
+
+        let no1,no2,no3;
+        no1=document.getElementById("first").value;
+        no2=document.getElementById("second").value;
+        no3=parseInt(no1)-parseInt(no2);
+        document.getElementById("result").value=no3;
+        }
+
+        function multiply(){
+
+        let no1,no2,no3;
+        no1=document.getElementById("first").value;
+        no2=document.getElementById("second").value;
+        no3=parseInt(no1)*parseInt(no2);
+        document.getElementById("result").value=no3;
+        }
+
+        function divide(){
+
+        let no1,no2,no3;
+        no1=document.getElementById("first").value;
+        no2=document.getElementById("second").value;
+        no3=parseInt(no1)/parseInt(no2);
+        document.getElementById("result").value=no3;
+        }
+
+
+
+
+    </script>
+
+    Enter First Number:<input type="text" id="first"> <br>
+    Enter Second Number:<input type="text" id="second"> <br>
+    <input type="Button" value="+" onclick="add()"> <br>
+    <input type="Button" value="-" onclick="substract()"> <br>
+    <input type="Button" value="*" onclick="multiply()"> <br>
+    <input type="Button" value="/" onclick="divide()"> <br>
+    The result is:<input type="Text" id="result">
+    </html>
+    

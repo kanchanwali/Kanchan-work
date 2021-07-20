@@ -1,0 +1,32 @@
+<html>
+
+<script>
+
+    function what(){
+
+        for(let i=0;i<document.forms[0].elements.length;i++){
+
+            if( document.forms[0].elements[i].value=="" && document.forms[0].elements[i].type=="text"){
+                
+                document.getElementById("QAE"+i).style.visibility="visible";
+                
+            }
+        }
+    }
+    </script>
+
+    <form>
+
+        <input> <span id="QAE0" style="visibility:hidden;color:salmon">**</span><br>
+        <input> <span id="QAE1" style="visibility:hidden;color:salmon">**</span><br>
+        <input> <span id="QAE2" style="visibility:hidden;color:salmon">**</span><br>
+        <input> <span id="QAE3" style="visibility:hidden;color:salmon">**</span><br>
+        <input> <span id="QAE4" style="visibility:hidden;color:salmon">**</span><br>
+        <input> <span id="QAE5" style="visibility:hidden;color:salmon">**</span><br>
+        <input> <span id="QAE6" style="visibility:hidden;color:salmon">**</span><br>
+        
+        
+        <input type="Button" onclick="what()"> 
+    </form>
+    </html>
+

@@ -1,0 +1,46 @@
+<html>
+
+<body onkeydown="what()">
+
+    <span style="position:absolute;top:0;left:0" id="sp">
+        <img src="football.jpg" width="20%"> </img>
+    </span>
+    </body>
+    <script>
+        let ref=document.getElementById("sp");
+        function what(){
+            // Right arrow key
+            if(event.keyCode==39){
+                ref.style.left=parseInt(ref.style.left)+10;
+            }
+            // Left Arrow key
+            if(event.keyCode==37){
+                ref.style.left=parseInt(ref.style.left)-10;
+        }
+          if(event.keyCode==32){
+            let timmer1;
+            let newElement=document.createElement("span");
+            newElement.innerHTML="<img src='football.jpg' width='20%'> </img>";
+            newElement.style="position:absolute;top:560";
+            newElement.style.left=ref.style.left;
+            document.body.appendChild(newElement);
+
+            timmer1=setInterval(function(){
+                let t=parseInt(Math.random()*1000);
+                let l=parseInt(Math.random()*2000);
+                document.getElementById("spl").style.top=t;
+                document.getElementById("spl").style.left=l;
+
+                
+
+                newElement.style.top= parseInt(newElement.style.top)-10;
+                if(parseInt(newElement.style.top)<10){
+                    clearInterval(timmer1);
+                    //alert("Hello");
+                }
+            },100);
+
+        }
+        }
+        </script>
+        </html>

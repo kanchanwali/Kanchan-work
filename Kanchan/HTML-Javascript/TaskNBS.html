@@ -1,0 +1,36 @@
+<html>
+    <body onmousemove="moving()"></body>
+
+
+<input type="text" id="t" value="Kanchan"
+    
+    onmouseleave="mouseleave1()"
+>
+
+<br>
+<span style="position:absolute;top:130;left:0" id="my">
+        Nationwide
+</span>
+
+<script>
+    let ref=document.getElementById("t");
+    let fontSize=12;
+
+    function moving(){
+        console.log(event.ctrlKey);
+        document.getElementById("my").style.top=event.clientY+30;
+        document.getElementById("my").style.left=event.clientX;
+        document.getElementById("my").style.fontSize=fontSize;
+
+
+    }
+
+    function mouseleave1(){
+        document.getElementById("my").innerHTML=document.getElementById("t").value;
+
+    }
+  
+
+    </script>
+    </html>
+    

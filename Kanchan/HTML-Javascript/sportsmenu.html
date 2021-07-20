@@ -1,0 +1,46 @@
+<html>
+    <span id="Main1" style="position:absolute;top:100;left:20"
+    onmouseenter="displaymenu1()">
+    Sports
+</span>
+<span id="Main2" style="position:absolute;top:100;left:250" onmouseenter="displaymenu2()">
+    Countries
+</span>
+
+<span id="sportsmenu" style="visibility:hidden" >
+    <span id="Football" style="position:absolute;top:125;left:20"
+    onmouseenter="mousein('Football')" onmouseleave="mouseout('Football')">Football</span>
+    <span id="Cricket" style="position:absolute;top:145;left:20"
+    onmouseenter="mousein('Cricket')" onmouseleave="mouseout('Cricket')">Cricket</span>
+    <span id="Hockey" style="position:absolute;top:165;left:20"
+    onmouseenter="mousein('Hockey')" onmouseleave="mouseout('Hockey')">Hockey</span>
+</span>
+
+<span id="countries" style="visibility:hidden" >
+    <span id="France" style="position:absolute;top:125;left:250"
+    onmouseenter="mousein('France')" onmouseleave="mouseout('France')">France</span>
+    <span id="England" style="position:absolute;top:145;left:250"
+    onmouseenter="mousein('England')" onmouseleave="mouseout('England')">England</span>
+    <span id="India" style="position:absolute;top:165;left:250"
+    onmouseenter="mousein('India')" onmouseleave="mouseout('India')">India</span>
+</span>
+
+<script>
+    function mousein(myID){
+        document.getElementById(myID).style.backgroundColor="pink";
+
+    }
+    function mouseout(myID){
+        document.getElementById(myID).style.backgroundColor="white";
+    }
+    function displaymenu1(){
+        document.getElementById("sportsmenu").style.visibility="visible";
+        document.getElementById("countries").style.visibility="hidden";
+    }
+    function displaymenu2(){
+        document.getElementById("countries").style.visibility="visible";
+        document.getElementById("sportsmenu").style.visibility="hidden";
+    }
+    </script>
+    </html>
+    

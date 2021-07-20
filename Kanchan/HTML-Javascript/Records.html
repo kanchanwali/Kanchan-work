@@ -1,0 +1,129 @@
+<html>
+<script>
+    let QArecords = [
+        {
+            "regno": 101,
+            "name": "Kanchan",
+            "marks": 400
+
+        },
+        {
+            "regno": 45,
+            "name": "Tanya",
+            "marks": 890
+        }
+    ];
+
+    function showRecords() {
+
+        let Reftable = document.createElement("table")
+        let Trow = document.createElement("tr");
+        let TD_regno = document.createElement("td");
+        let TD_name = document.createElement("td");
+        let TD_marks = document.createElement("td");
+        let TD_percentage = document.createElement("td");
+        let TD_results = document.createElement("td");
+
+        TD_regno.innerHTML = "<b> Registration </B>";
+        TD_name.innerHTML = "<b> Name </B>";
+        TD_marks.innerHTML = "<b> Marks </B>";
+        TD_percentage.innerHTML = "<b> Percentage </B>";
+        TD_results.innerHTML = "<b> Results </B>";
+
+
+        Trow.appendChild(TD_regno);
+        Trow.appendChild(TD_name);
+        Trow.appendChild(TD_marks);
+        Trow.appendChild(TD_percentage);
+        Trow.appendChild(TD_results);
+
+        Reftable.appendChild(Trow);
+
+        for (let i = 0; i < QArecords.length; i++) {
+
+            let Trow = document.createElement("tr");
+            Trow.style.backgroundColor = "pink";
+
+            let TD_regno = document.createElement("td");
+            let TD_name = document.createElement("td");
+            let TD_marks = document.createElement("td");
+            let TD_percentage = document.createElement("td");
+            let TD_results = document.createElement("td");
+
+            TD_regno.innerHTML = QArecords[i].regno;
+            TD_name.innerHTML = QArecords[i].name;
+            TD_marks.innerHTML = QArecords[i].marks;
+            TD_percentage.innerHTML = QArecords[i].marks * 100 / 150;
+            if (QArecords[i].marks * 100 / 150 >= 50) {
+                TD_results.innerHTML = "<font color='green'> Pass </font>";
+            } else {
+                TD_results.innerHTML = "<font color='red'> Fail </font>";
+            }
+
+            Trow.appendChild(TD_regno);
+            Trow.appendChild(TD_name);
+            Trow.appendChild(TD_marks);
+            Trow.appendChild(TD_percentage);
+            Trow.appendChild(TD_results);
+
+            Reftable.appendChild(Trow);
+
+
+
+
+            // addRecordToDom(QArecords[i].regno,QArecords[i].name,QArecords[i].marks);    
+        }
+        document.body.appendChild(Reftable);
+
+    }
+
+    function showPassRecords() {
+        for (let i = 0; i < QArecords.length; i++) {
+
+            if (QArecords[i].marks > 50) {
+                addRecordToDom(QArecords[i].regno, QArecords[i].name, QArecords[i].marks);
+
+            }
+        }
+    }
+    function addRecord() {
+
+        QArecords.push(
+            {
+                "regno": document.getElementById("regno").value,
+                "name": document.getElementById("name").value,
+                "marks": document.getElementById("marks").value,
+            }
+        );
+    }
+
+    function addRecordToDom(regno, name, marks) {
+        let spanRecord = document.createElement("div");
+        let spanRegno = document.createElement("span");
+        let spanName = document.createElement("span");
+        let spanMarks = document.createElement("span");
+
+        spanRegno.innerHTML = regno;
+        spanName.innerHTML = name;
+        spanMarks.innerHTML = marks;
+
+        spanName.style.color = "green";
+        spanRecord.appendChild(spanRegno);
+        spanRecord.appendChild(spanName);
+        spanRecord.appendChild(spanMarks);
+
+        document.body.appendChild(spanRecord);
+    }
+
+</script>
+
+Regno:<input type="text" id="regno"> <br>
+Name:<input type="text" id="name"><br>
+Marks:<input type="text" id="marks"><br>
+<br>
+<input type="Button" value="show records" onclick="showRecords()">
+
+<input type="Button" value="Add Record" onclick="addRecord()">
+<input type="Button" value="Passed Students" onclick="showPassRecords()">
+
+</html>

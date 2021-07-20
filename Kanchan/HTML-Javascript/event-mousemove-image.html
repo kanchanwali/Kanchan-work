@@ -1,0 +1,38 @@
+<html>
+
+        <body onmousemove="what()">
+        
+        <input type="button" onclick="changeColor()">
+        <input type="button" value="Font" onclick="changeFontSize()">
+        <b id="QA" style="position:absolute;top:10;left:0">
+
+        <img src="football.jpg" width="20%" height="30%"> 
+        </img>
+    </b>
+        </body>
+        <script>
+            let FSize=10;
+            let ref=document.getElementById("QA");
+            function what(){
+                ref.style.top=event.clientY+30;
+                ref.style.left=event.clientX;
+                ref.style.fontSize= event.clientY;
+
+
+            }
+
+            function changeColor(){
+                ref.style.color="green";
+
+            }
+
+            function changeFontSize(){
+                // FSize++;
+                // ref.style.fontSize=FSize;
+                ref.style.fontSize= event.clientY;
+            }
+
+        </script>
+
+
+</html>

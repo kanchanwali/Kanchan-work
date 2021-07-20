@@ -1,0 +1,45 @@
+<html>
+
+<script>
+
+    let words=[];
+
+    function checkForDuplicates(myword){
+        for(let j=0;j<words.length;j++){
+            if( words[j]==myWord){
+                return false;
+            }
+        }
+        words.push(myWord);
+        return true;
+
+
+
+    }
+
+    function checkforwords(){
+        words=[];
+        let message=document.getelementById("msg").value;
+        let word="";
+        let newmessage="";
+        for(let i=0;message.length;i++){
+            if (message.substring(i,i+1)==" "){
+              if (checkForDuplicates(word)==true){
+                  newmessage+=" "+ word;
+              }
+                word="";
+
+            }else{
+                word+message.substring(i,i+1);
+
+            }
+        }
+        if (checkForDuplicates(word)==true)
+    }
+</script>
+
+<input type="text" id="msg"> <br>
+<input type="Button" onclick="checkforwords()"> <br>
+<input type="text" id="msg2"> <br>
+
+     </html>

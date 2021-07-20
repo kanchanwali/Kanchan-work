@@ -1,0 +1,76 @@
+<html>
+    <script>
+        function CopyUpperCase(){
+
+            let msg=document.getElementById("message").value;
+            let newmessage="";
+
+            for(let i=0;i<msg.length;i++){
+                if( msg.charCodeAt(i)>65 && msg.charCodeAt(i)<=90 ){
+                    newmessage+= msg.substring(i,i+1);
+
+                }
+            }
+            document.getElementById("newmessage").value=newmessage;
+        }
+        
+        function CopyLowerCase(){
+
+                let msg=document.getElementById("message").value;
+                let newmessage="";
+
+                for(let i=0;i<msg.length;i++){
+                      if( msg.charCodeAt(i)>97 && msg.charCodeAt(i)<=172 ){
+                            newmessage+= msg.substring(i,i+1);
+
+    }
+}
+                document.getElementById("newmessage").value=newmessage;
+}
+
+                
+            function CopyDigits(){
+
+            let msg=document.getElementById("message").value;
+            let newmessage="";
+
+            for(let i=0;i<msg.length;i++){
+                if( msg.charCodeAt(i)>48 && msg.charCodeAt(i)<=57 ){
+                        newmessage+= msg.substring(i,i+1);
+
+    }
+}
+
+                document.getElementById("newmessage").value=newmessage
+}
+
+
+                function CopySpecialChar(){
+
+                        let msg=document.getElementById("message").value;
+                        let newmessage="";
+
+                        for(let i=0;i<msg.length;i++){
+                        if(!((msg.charCodeAt(i)>=65 && msg.charCodeAt(i)<=90) || (msg.charCodeAt(i)>=97 && msg.charCodeAt(i)<=172) || (msg.charCodeAt(i)>9=48 && msg.charCodeAt(i)<=57))){
+                            newmessage+= msg.substring(i,i+1);
+
+                    }
+}
+                            document.getElementById("newmessage").value=newmessage
+}
+                    </script>
+
+
+
+            <input type="Text" id="message"><br>
+            <input type="button" value="Upper Case" onclick="CopyUpperCase()">
+            <input type="button" value="Lower Case">
+            <input type="button" value="Digits">
+            <input type="button" value="Special characters">
+            <input type="text" value="newmessage">
+
+            </html>
+
+            
+
+

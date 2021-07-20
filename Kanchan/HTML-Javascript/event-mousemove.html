@@ -1,0 +1,28 @@
+<html>
+<input type="text" id="t" value="0">
+<br>
+<input type="button" value="++++++++++++++"
+                    onmousemove="mousemiving1()"
+                    onmouseenter="mouseenter1()"
+                    onmouseleave="mouseleave1()"
+>
+
+
+<script>
+    let ref=document.getElementById("t");
+    function mousemiving1(){
+
+        ref.value= parseInt(ref.value)+1;
+    }
+
+    function mouseleave1(){
+        ref.value="2";
+
+    }
+    function mouseenter1(){
+        ref.value="10";
+    }
+
+    </script>
+
+    </html>
